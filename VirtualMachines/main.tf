@@ -41,6 +41,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_password      = var.admin_password
   network_interface_ids = [azurerm_network_interface.nic.id]
 
+  depends_on = [azurerm_network_interface.nic]
+
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"

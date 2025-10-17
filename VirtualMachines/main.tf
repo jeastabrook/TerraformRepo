@@ -32,7 +32,7 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = "terraform-vm"
+  name                = "TEST_TERRAFORM"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   size                = "Standard_B2s"

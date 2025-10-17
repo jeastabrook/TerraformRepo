@@ -2,6 +2,8 @@ name: Terraform Apply
 
 on:
   push:
+    paths:
+      - 'VirtualMachines/**' # Triggers on changes within 'your-subdirectory'
     branches:
       - main  # or your deployment branch
 
